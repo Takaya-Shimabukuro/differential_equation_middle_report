@@ -99,7 +99,7 @@ basicstyle={\scriptsize}
 \end{equation}
 
 ここで，$(P(1)=-4\neq 0)$が成り立つため，公式(\ref{mf:2})を用いることができる．
-よって特解$y_p$は
+よって特解$y_p$は以下のように求まる．
 
 \begin{equation}
   y_p = -\frac{1}{4}e^{x}
@@ -110,22 +110,23 @@ basicstyle={\scriptsize}
 よって，微分演算子を用い，因数分解し，$y_p$の式に直すと以下のようになる．
 
 \begin{equation}
-  y_p = \frac{1}{(D-1)(D-2)}e^{3x}
+  y_p = \frac{1}{(D-3)(D+1)}e^{3x}
 \end{equation}
 
 ここで，$(P(3)= 0)$より公式(\ref{mf:2})が使えない．
-そこで，基本公式である公式(\ref{mf:1})を用いる．
-よって，特解$y_p$は
+そこで，基本公式である公式(\ref{mf:1})を用いると
 
 \begin{equation}
-  \frac{1}{D-2}e^{3x}=e^{3x}
+  \frac{1}{D-3}\cdot\frac{1}{4}e^{3x}
 \end{equation}
 
-となり，特解は
-\begin{align}
-  y_p &= \frac{1}{D-1}e^{3x}\\
-  &= -\frac{1}{2}e^{3x}
-\end{align}
+となり，特解$y_p$は以下のように求まる．
+
+\begin{equation}
+  y_p=\frac{1}{4}xe^{3x}
+\end{equation}
+
+積分定数は一般解を求めたときに吸収されるので書かなくてよい．
 
 \subsection{問3｜$y''-2y'-3y=e^x+e^{3x}+\sin x$}
 

@@ -43,11 +43,11 @@ basicstyle={\scriptsize}
 \section{公式}
 計算に使う公式を以下に示す．
 \begin{mf}
-  $\frac{1}{D+\alpha}r(x) &= e{-\alpha x}\int r(x)e{\alpha x}$
+  $\frac{1}{D+\alpha}r(x) = e^{-\alpha x}\int r(x)e{\alpha x}$
   \label{mf:1}
 \end{mf}
 \begin{mf}
-  $y_p=\frac{1}{P(D)}e^{\alpha x} &= \frac{1}{P(\alpha)}e^{\alpha x}, (P(\alpha)\neq 0)$
+  $y_p=\frac{1}{P(D)}e^{\alpha x} = \frac{1}{P(\alpha)}e^{\alpha x}, (P(\alpha)\neq 0)$
   \label{mf:2}
 \end{mf}
 
@@ -192,20 +192,29 @@ basicstyle={\scriptsize}
 \subsection{問2｜$\alpha=0$のときの斉次解を求めよ。}
 式(\ref{equ:2-2})に$\alpha=0$を代入して特性方程式の解を求めると，斉次解は
 \begin{equation}
-  y= C_1e^{2xi}+C_2e^{-2xi}, 
+  x= C_1e^{it}+C_2e^{-it}, 
 \end{equation}
-で与えられる．(C_1, C_2は任意定数)
+で与えられる．($C_1$, $C_2$は任意定数)
 
 ここで，オイラーの公式を用い，$A=i(C_1-C_2)，B=C_1+C_2$とすると
 \begin{equation}
-  y= A\sin 2x + B i\cos 2x, 
+  y= A\sin t + B\cos t, 
 \end{equation}
 
 で与えられる．(A，Bは任意定数)
 
 \subsection{問3｜$\alpha=0$, $F(t)=2\cos t$ のときの一般解を求めよ。}
+斉次解は問2で求めてあるため，特解を求める．
+微分演算子を用いて大問1の問2と同様に計算すると
+\begin{equation}
+  x_p=\frac{1}{(D-i)(D+i)}2e^{it}=t\sin t
+\end{equation}
 
+よって，一般解は
 
+\begin{equation}
+  x = A\sin t + B\cos t + t\sin t
+\end{equation}
 %=====================================================================
 
 \bibliography{webDB.bib}

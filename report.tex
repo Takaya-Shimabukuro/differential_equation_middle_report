@@ -35,9 +35,6 @@ basicstyle={\scriptsize}
 
 
 %=====================================================================
-\section{目的}
-　与えられた微分方程式の解を導出し，その式がどのような動作をするのかを考察することで
-理解を深めることを目的とする
 
 %=====================================================================
 \section{公式}
@@ -56,22 +53,8 @@ basicstyle={\scriptsize}
 %=====================================================================
 \section{大問1}
 問題文を以下に示す．
-\begin{equation}
-  y''-2y'-3y=e^x
-  \label{equ:1}
-\end{equation}
-\begin{equation}
-  y''-2y'-3y=e^{3x}
-  \label{equ:2}
-\end{equation}
-\begin{equation}
-  y''-2y'-3y=e^x+e^{3x}+\sin x
-  \label{equ:3}
-\end{equation}
-
-
 \subsection{問1｜$y''-2y'-3y=e^x$}
-式(\ref{equ:1})は以下の特徴をもつ．
+問題文の式は以下の特徴をもつ．
 
 \begin{itemize}
   \item $y''$が最も高い階数→2階
@@ -81,8 +64,7 @@ basicstyle={\scriptsize}
   \item $e^x$が存在 → 非斉次
 \end{itemize}
 
-上記により(\ref{equ:1})式は線形非斉次微分方程式であることがわかる．\\
-
+上記により線形非斉次微分方程式であることがわかる．\\
 線形非斉次微分方程式において，演算子法を用いた特解の導出は以下の手順で行う．
 
 \begin{enumerate}
@@ -91,8 +73,7 @@ basicstyle={\scriptsize}
   \item 変形した逆演算子を用いる．
 \end{enumerate}
 
-では，特解$y_p$を導出していく．\\
-(\ref{equ:1})式を微分演算子を用い，$y_p$の式に直すと以下のようになる．
+微分演算子を用い，$y_p$の式に直すと以下のようになる．
 
 \begin{equation}
   y_p = \frac{1}{(D^2-2D-3)}e^x
@@ -126,8 +107,6 @@ basicstyle={\scriptsize}
   y_p=\frac{1}{4}xe^{3x}
 \end{equation}
 
-積分定数は一般解を求めたときに吸収されるので書かなくてよい．
-
 \subsection{問3｜$y''-2y'-3y=e^x+e^{3x}+\sin x$}
 非斉次項の$\sin x$はオイラーの公式を応用し$e_{ix}$と置き換えられる．
 問2と同様に計算すると，特解$y_p$を求める式は以下のようになる．
@@ -154,21 +133,13 @@ basicstyle={\scriptsize}
   y_p = -\frac{1}{4}e^x + \frac{1}{4}xe^{3x} - \frac{1}{5}\sin x + \frac{1}{10}\cos x
 \end{equation}
 
-積分定数は一般解を求めたときに吸収されるので書かなくてよい．
-
 \section{大問2}
-問題を以下に示す．
+式(\ref{equ:2-1})について，以下について答えよ．
+
 \begin{equation}
   \frac{d^2x}{dt^2}+\alpha \frac{dx}{dt}+x=F(t)　(\alpha \geq 0)
   \label{equ:2-1}
 \end{equation}
-
-式(\ref{equ:2-1})について，
-\begin{enumerate}
-  \item 特性方程式の解が虚数解となる定数$\alpha$の範囲を求めよ。
-  \item $\alpha=0$のときの斉次解を求めよ。
-  \item $\alpha=0$, $F(t)=2\cos 𝑡$ のときの一般解を求めよ。
-\end{enumerate}
 
 \subsection{問1｜特性方程式の解が虚数解となる定数$\alpha$の範囲を求めよ}
 式(\ref{equ:2-1})の特性方程式は以下のようになる．
@@ -215,11 +186,41 @@ basicstyle={\scriptsize}
 \begin{equation}
   x = A\sin t + B\cos t + t\sin t
 \end{equation}
+
+ここで考察を述べていく．この問題は，質量$m=1$，摩擦係数$\alpha,(\alpha \geq 0)$，ばね係数$k=1$の重りがついた
+バネに，外力$2\cos x$が加わっているものと考えることができる．\\
+外力を$2\cos x$，内力を$x'' + \alpha x' + x$とし，特性方程式から推測できる3つの条件でそれぞれ場合分けして考える．
+\newpage
+\underline{$\alpha=2$}\\
+これは臨界値であり，外力と内力が釣り合っている状態である．
+そのため，時間が経つと振動はするが振幅は変わらない．グラフに描くと図\ref{fig:2}のようになる．
+
+\begin{figure}[!htbp]
+  \centering  % 図を真ん中に配置
+  \includegraphics[clip,width = 4.0cm]{2.jpg}
+  \caption{$\alpha=2$のときのグラフ}
+  \label{fig:2}
+  \end{figure}
+
+\underline{$\alpha <2$}\\
+これは，外力が内力を上回っている様態であり，時間が経つと振動しながら振幅が大きくなる．グラフに描くと図\ref{fig:0}のようになる．
+\begin{figure}[htbp]
+  \centering  % 図を真ん中に配置
+  \includegraphics[clip,width = 4.0cm]{0.jpg}
+  \caption{$\alpha=0$のときのグラフ}
+  \label{fig:0}
+  \end{figure}
+
+\underline{$\alpha >2$}\\
+これは，内力が外力を上回っている状態であり，時間がたつと振動しながら減衰していきやがて，$2cos x$に収束する
+動きを見せる．グラフに描くと図\ref{fig:10}のようになる．
+\begin{figure}[htbp]
+  \centering  % 図を真ん中に配置
+  \includegraphics[clip,width = 4.0cm]{10.jpg}
+  \caption{$\alpha=10$のときのグラフ}
+  \label{fig:10}
+  \end{figure}
 %=====================================================================
-
-\bibliography{webDB.bib}
-\bibliographystyle{ieeetr} 
-
 
 
 \end{document}

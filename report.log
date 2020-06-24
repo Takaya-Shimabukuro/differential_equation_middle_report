@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.6.19)  24 JUN 2020 22:49
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.6.19)  25 JUN 2020 00:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -540,33 +540,38 @@ LaTeX Font Info:    Font shape `TU/ipaexm.ttf(0)/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/ipaexg.ttf(0)/m/n' will be
-(Font)              scaled to size 13.31586pt on input line 38.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+(Font)              scaled to size 13.31586pt on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/ipaexg.ttf(0)/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 73.
- [1] [2]
+(Font)              scaled to size 11.09656pt on input line 56.
+ [1]
 Missing character: There is no 　 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 𝑡 in font cmmi10!
+ [2]
 Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text;!
- [3] (./report.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-) [4] (./report.aux) ) 
+ [3]
+File: 2.jpg Graphic file (type bmp)
+<2.jpg>
+LaTeX Font Info:    Font shape `TU/ipaexm.ttf(0)/m/n' will be
+(Font)              scaled to size 8.32242pt on input line 201.
+File: 0.jpg Graphic file (type bmp)
+<0.jpg>
+File: 10.jpg Graphic file (type bmp)
+<10.jpg>
+ [4] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 9737 strings out of 479284
- 220405 string characters out of 5884020
+ 9766 strings out of 479284
+ 220143 string characters out of 5884020
  525063 words of memory out of 5000000
- 27221 multiletter control sequences out of 15000+600000
- 544408 words of font info for 93 fonts, out of 8000000 for 9000
+ 27237 multiletter control sequences out of 15000+600000
+ 546890 words of font info for 104 fonts, out of 8000000 for 9000
  1353 hyphenation exceptions out of 8191
  52i,5n,82p,358b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.xdv (5 pages, 27856 bytes).
+Output written on report.xdv (5 pages, 30804 bytes).

@@ -11,6 +11,7 @@
 \usepackage{listings}
 \usepackage{bm}
 \usepackage{cite} 
+\newtheorem{mf}{公式}
 
 \lstset{
 basicstyle={\scriptsize}
@@ -35,20 +36,78 @@ basicstyle={\scriptsize}
 
 %=====================================================================
 \section{目的}
-　式に応じた微分方程式の解き，その式がどのような動作をするのかを考察することで
+　与えられた微分方程式の解を導出し，その式がどのような動作をするのかを考察することで
 理解を深めることを目的とする
 
+%=====================================================================
+\section{公式}
+計算に使う公式を以下に示す．
+\begin{mf}
+  $\frac{1}{D+\alpha}r(x) &= e{-\alpha x}\int r(x)e{\alpha x}$
+  \label{mf:1}
+\end{mf}
+\begin{mf}
+  $y_p=\frac{1}{P(D)}e^{\alpha x} &= \frac{1}{P(\alpha)}e^{\alpha x}, (P(\alpha)\neq 0)$
+  \label{mf:2}
+\end{mf}
+
+          
 
 %=====================================================================
 \section{大問1}
 問題文を以下に示す．
-\begin{enumerate}
-  \item $y''-2y'-3y=e^x$
-  \item $y''-2y'-3y=e^{3x}$
-  \item $y''-2y'-3y=e^x+e^{3x}+\sin x$
-\end{enumerate}
+\begin{equation}
+  y''-2y'-3y=e^x
+  \label{equ:1}
+\end{equation}
+\begin{equation}
+  y''-2y'-3y=e^{3x}
+  \label{equ:2}
+\end{equation}
+\begin{equation}
+  y''-2y'-3y=e^x+e^{3x}+\sin x
+  \label{equ:3}
+\end{equation}
+
 
 \subsection{問１｜$y''-2y'-3y=e^x$}
+問題の式は以下の特徴をもつ．
+
+\begin{itemize}
+  \item $y''$が最も高い階数→2階
+  \item $y$の微分係数に$x$がかかっていない → 定数係数
+  \item $y''$にかかる係数が1 → 正規系
+  \item $y$と$y$の微分がすべて1乗 → 線形
+  \item $e^x$が存在 → 非斉次
+\end{itemize}
+
+上記により(\ref{equ:1})式は線形非斉次微分方程式であることがわかる．\\
+
+演算子法による線形非斉次微分方程式における特解の導出は以下の手順で行う．
+
+\begin{enumerate}
+  \item 演算子法を用いて表す．
+  \item yについて解く．
+  \item 変形した逆演算子を用いる．
+\end{enumerate}
+
+では，特解$y_p$を導出していく．\\
+まず，(\ref{equ:1})式を微分演算子を用い，因数分解し，$y_p$の式に直すと以下のようになる．
+\begin{equation}
+  y_p = \frac{1}{(D-1)(D-2)}e^x
+\end{equation}
+
+ここで公式(\ref{mf:1})を用いると，
+\begin{equation}
+  \frac{1}{D-2}e^x=-e^x
+\end{equation}
+
+となり，特解は
+\begin{align}
+  y_p &= -\frac{1}{D-1}e^x\\
+  &= -xe^x
+\end{align}
+
 
 
 \section{大問2}

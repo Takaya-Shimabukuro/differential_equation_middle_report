@@ -158,7 +158,12 @@ basicstyle={\scriptsize}
 
 \section{大問2}
 問題を以下に示す．
-$\frac{d^2x}{dt^2}+\alpha \frac{dx}{dt}+x=F(t)　(\alpha \geq 0)$ について
+\begin{equation}
+  \frac{d^2x}{dt^2}+\alpha \frac{dx}{dt}+x=F(t)　(\alpha \geq 0)
+  \label{equ:2-1}
+\end{equation}
+
+式(\ref{equ:2-1})について，
 \begin{enumerate}
   \item 特性方程式の解が虚数解となる定数$\alpha$の範囲を求めよ。
   \item $\alpha=0$のときの斉次解を求めよ。
@@ -166,8 +171,37 @@ $\frac{d^2x}{dt^2}+\alpha \frac{dx}{dt}+x=F(t)　(\alpha \geq 0)$ について
 \end{enumerate}
 
 \subsection{問1｜特性方程式の解が虚数解となる定数$\alpha$の範囲を求めよ}
+式(\ref{equ:2-1})の特性方程式は以下のようになる．
+
+\begin{equation}
+  \lambda^2 + \alpha \lambda + x = 0
+\end{equation}
+
+二次方程式の解の公式を用いると，
+
+\begin{equation}
+ \lambda = \frac{-\alpha \pm \sqrt{\alpha^2 - 4}}{2}
+ \label{equ:2-2}
+\end{equation}
+
+よって，虚数解となる$\alpha$の範囲は
+\begin{equation}
+  -2 < \alpha < 2
+\end{equation}
 
 \subsection{問2｜$\alpha=0$のときの斉次解を求めよ。}
+式(\ref{equ:2-2})に$\alpha=0$を代入して特性方程式の解を求めると，斉次解は
+\begin{equation}
+  y= C_1e^{2xi}+C_2e^{-2xi}, 
+\end{equation}
+で与えられる．(C_1, C_2は任意定数)
+
+ここで，オイラーの公式を用い，$A=i(C_1-C_2)，B=C_1+C_2$とすると
+\begin{equation}
+  y= A\sin 2x + B i\cos 2x, 
+\end{equation}
+
+で与えられる．(A，Bは任意定数)
 
 \subsection{問3｜$\alpha=0$, $F(t)=2\cos t$ のときの一般解を求めよ。}
 

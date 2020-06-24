@@ -70,8 +70,8 @@ basicstyle={\scriptsize}
 \end{equation}
 
 
-\subsection{問１｜$y''-2y'-3y=e^x$}
-問題の式は以下の特徴をもつ．
+\subsection{問1｜$y''-2y'-3y=e^x$}
+式(\ref{equ:1})は以下の特徴をもつ．
 
 \begin{itemize}
   \item $y''$が最も高い階数→2階
@@ -83,7 +83,7 @@ basicstyle={\scriptsize}
 
 上記により(\ref{equ:1})式は線形非斉次微分方程式であることがわかる．\\
 
-演算子法による線形非斉次微分方程式における特解の導出は以下の手順で行う．
+線形非斉次微分方程式において，演算子法を用いた特解の導出は以下の手順で行う．
 
 \begin{enumerate}
   \item 演算子法を用いて表す．
@@ -92,23 +92,42 @@ basicstyle={\scriptsize}
 \end{enumerate}
 
 では，特解$y_p$を導出していく．\\
-まず，(\ref{equ:1})式を微分演算子を用い，因数分解し，$y_p$の式に直すと以下のようになる．
+(\ref{equ:1})式を微分演算子を用い，$y_p$の式に直すと以下のようになる．
+
 \begin{equation}
-  y_p = \frac{1}{(D-1)(D-2)}e^x
+  y_p = \frac{1}{(D^2-2D-3)}e^x
 \end{equation}
 
-ここで公式(\ref{mf:1})を用いると，
+ここで，$(P(1)=-4\neq 0)$が成り立つため，公式(\ref{mf:2})を用いることができる．
+よって特解$y_p$は
+
 \begin{equation}
-  \frac{1}{D-2}e^x=-e^x
+  y_p = -\frac{1}{4}e^{x}
+\end{equation}
+
+\subsection{問2｜$y''-2y'-3y=e^{3x}$}
+問2も問1と同様に線形非斉次微分方程式である．
+よって，微分演算子を用い，因数分解し，$y_p$の式に直すと以下のようになる．
+
+\begin{equation}
+  y_p = \frac{1}{(D-1)(D-2)}e^{3x}
+\end{equation}
+
+ここで，$(P(3)= 0)$より公式(\ref{mf:2})が使えない．
+そこで，基本公式である公式(\ref{mf:1})を用いる．
+よって，特解$y_p$は
+
+\begin{equation}
+  \frac{1}{D-2}e^{3x}=e^{3x}
 \end{equation}
 
 となり，特解は
 \begin{align}
-  y_p &= -\frac{1}{D-1}e^x\\
-  &= -xe^x
+  y_p &= \frac{1}{D-1}e^{3x}\\
+  &= -\frac{1}{2}e^{3x}
 \end{align}
 
-
+\subsection{問3｜$y''-2y'-3y=e^x+e^{3x}+\sin x$}
 
 \section{大問2}
 \subsection{}

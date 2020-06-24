@@ -107,7 +107,7 @@ basicstyle={\scriptsize}
 
 \subsection{問2｜$y''-2y'-3y=e^{3x}$}
 問2も問1と同様に線形非斉次微分方程式である．
-よって，微分演算子を用い，因数分解し，$y_p$の式に直すと以下のようになる．
+よって，微分演算子を用い，因数分解し，特解$y_p$の式に直すと以下のようになる．
 
 \begin{equation}
   y_p = \frac{1}{(D-3)(D+1)}e^{3x}
@@ -129,6 +129,32 @@ basicstyle={\scriptsize}
 積分定数は一般解を求めたときに吸収されるので書かなくてよい．
 
 \subsection{問3｜$y''-2y'-3y=e^x+e^{3x}+\sin x$}
+非斉次項の$\sin x$はオイラーの公式を応用し$e_{ix}$と置き換えられる．
+問2と同様に計算すると，特解$y_p$を求める式は以下のようになる．
+
+\begin{equation}
+  y_p = \frac{1}{(D - 3)(D + 1)}(e^x + e^{3x} + e^{ix})
+\end{equation}
+
+公式(\ref{mf:1})を用いると，
+
+\begin{equation}
+  y_p = \frac{1}{D - 3}(\frac{1}{2}e^x + \frac{1}{4}e^{3x} + \frac{1}{1+i}e^{ix})
+\end{equation}
+
+同様に$\frac{1}{D-3}$の項も計算し，$e^{ix}$の係数を有理化すると，
+
+\begin{equation}
+  y_p = -\frac{1}{4}e^x + \frac{1}{4}xe^{3x} - \frac{2 - i}{10}(\cos x + i\sin x)
+\end{equation}
+
+ここで，$\sin x$を$e^{ix}$と置いたことから虚部を解にすると特解$y_p$は以下のように求まる．
+
+\begin{equation}
+  y_p = -\frac{1}{4}e^x + \frac{1}{4}xe^{3x} - \frac{1}{5}\sin x + \frac{1}{10}\cos x
+\end{equation}
+
+積分定数は一般解を求めたときに吸収されるので書かなくてよい．
 
 \section{大問2}
 \subsection{}
